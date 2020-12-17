@@ -1,9 +1,3 @@
-@import '~normalize.css/normalize';
-@import "./help/fonts.scss";
-@import "./base/header.scss";
-@import "./base/banner.scss";
-
-
 *,
 *::before,
 *::after {
@@ -12,7 +6,7 @@
 
 /* Remove default padding */
 ul[class],
-ol[class] {
+ol {
     padding: 0;
 }
 
@@ -45,19 +39,17 @@ body {
     line-height: 24px;
     font-weight: 400;
     font-family: "SFProDisplay-Regular", sans-serif;
+    overflow-x: hidden;
+    min-width: 320px;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+ul,
+ol {
     list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-    color: red;
-}
 
 a {
     text-decoration: none;
