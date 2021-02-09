@@ -1,0 +1,111 @@
+
+.main {
+    background: url(../assets//images/background/background.jpg)center center;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    font-family: Montserrat;
+    margin-bottom: 57px;
+    position: relative;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+    &__right {
+        width: 100%;
+    }
+    &__header {
+        margin-top: 70px;
+    }
+    &__list-item {
+        display: flex;
+    }
+    &__item {
+        margin-right: 100px;
+        &:last-child {
+            margin-right: 30px;
+        }
+        &:first-child {
+            margin-left: 20px;
+        }
+    }
+    &__link {
+        color: #1d1d1b;
+        font-family: "BebasNeue";
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &__phone-link {
+        border-radius: 10px;
+        border: 1px solid #c7af8a;
+        padding: 6px 13px;
+    }
+    &__text {
+        margin-bottom: 115px;
+    }
+    &__hotel {
+        color: #444444;
+        font-family: "BebasNeue";
+        font-size: 34px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    &__title {
+        width: 816px;
+        margin-left: -65px;
+    }
+    &__logo {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    &__subtitle {
+        color: #444444;
+        font-family: "BebasNeueBook";
+        font-size: 51px;
+        font-weight: 400;
+        text-align: right;
+    }
+    &__offer {
+        margin-left: 144px;
+        position: relative;
+        padding-left: 45px;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 237px;
+            width: 24px;
+            background: url(../assets/images/frame.png);
+            top: 0;
+            left: -20px;
+        }
+    }
+    &__price {
+        color: #c7af8a;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 600;
+        max-width: 168px;
+        margin-bottom: 31px;
+    }
+    &__sap {
+        text-align: left;
+    }
+    &__number {
+        font-size: 45px;
+        margin: 10px 0;
+    }
+    &__sab {
+        display: block;
+        text-align: right;
+    }
+    &__description {
+        width: 350px;
+        color: #444444;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}

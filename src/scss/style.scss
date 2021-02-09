@@ -1,3 +1,7 @@
+@import "./fonts.scss";
+@import "./main.scss";
+@import "./booking.scss";
+
 *,
 *::before,
 *::after {
@@ -58,8 +62,10 @@ a {
 
 /* Make images easier to work with */
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
+    padding: 0;
+    margin: 0;
 }
 
 /* Natural flow and rhythm in articles by default */
@@ -87,7 +93,15 @@ select {
 
 ;
 
+input {
+    color: #444444;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    float: right;
 }

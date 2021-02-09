@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div class="main">
+        <div class="shape">
+            <video width="950" autoplay="autoplay" height="1186" controls autoplay class="video">
+                <source src="./assets/videos/les.mp4" type="video/mp4">
+                <source src="./assets/videos/les.mp4.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class=" container">
+            <div class="main__content">
+                <div class="main__header">
+                    <ul class="main__list-item">
+                        <li class="main__item"><a href="#" class="main__link">об отеле</a></li>
+                        <li class="main__item"><a href="#" class="main__link"> номера и цены</a></li>
+                        <li class="main__item"><a href="#" class="main__link">мероприятия</a></li>
+                        <li class="main__item"><a href="#" class="main__link">контакты</a></li>
+                        <li class="main__item">
+                            <a href="#" type="tel" class="main__link main__phone-link">
+                                +7 (495)005-61-59
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__text">
+                <h3 class="main__hotel">
+                    ОТЕЛЬ-ЗАПОВЕДНИК
+                </h3>
+                <div class="main__title">
+                    <img src="./assets/images/logo.png" class="main__logo" alt="logo" />
+                    <h2 class="main__subtitle">ПРЕМИАЛЬНЫЙ ОТДЫХ В ПОДМОСКОВЬЕ</h2>
+                </div>
+            </div>
+            <div class="main__offer">
+                <div class="main__price">
+                    <span class="main__sap">ОТ</span>
+                    <h3 class="main__number">5 500 ₽</h3>
+                    <span class="main__sab">в сутки</span>
+                </div>
+                <p class="main__description">
+                    4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор
+                    и контактный зоопарк.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="booking">
+        <h4 class="booking__room">Бронирование номеров</h4>
+        <form class="booking__form">
+            <input type="date" value="2021-02-09" class="booking__in booking__date" />
+            <input type="date" value="2021-02-09" class="booking__out booking__date" />
+            <input type="date" value="2021-02-09" class="booking__out booking__date" />
+            <label class="booking__label">
+                <label class="booking__lab">
+                    <input type="number" class="booking__user" value="1" />
+                </label>
+            </label>
+        </form>
+        <button class="booking__button">Найти номер</button>
+    </div>
+    </div>
     <script src="js/script.min.js"></script>
 </body>
+
 </html>

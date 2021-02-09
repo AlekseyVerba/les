@@ -1,0 +1,128 @@
+.booking {
+    padding: 10px 0;
+    background-color: #d3c1a2;
+    width: 1400px;
+    float: right;
+    display: flex;
+    align-items: center;
+    &__room {
+        color: #1d1d1b;
+        font-family: "BebasNeue";
+        font-size: 30px;
+        font-weight: 400;
+        margin-right: 30px;
+        margin-left: 110px;
+    }
+    // &__form {
+    //     display: flex;
+    //     align-items: center;
+    // }
+    &__date {
+        padding: 20px 0 0 50px;
+        position: relative;
+        width: 160px;
+        border-radius: 3px;
+        margin-right: 23px;
+        cursor: pointer;
+        border: none;
+        &::after {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            height: 23px;
+            width: 23px;
+            background: url(../assets/images/icon/calendar.png)no-repeat center /cover;
+        }
+        &::before {
+            content: "Заезд";
+            position: absolute;
+            color: #444444cc;
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 600;
+            top: 0;
+            left: 52px;
+        }
+    }
+    &__out {
+        &::before {
+            content: "Выезд";
+            position: absolute;
+            color: #444444cc;
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 600;
+            top: 0;
+            left: 52px;
+        }
+    }
+    &__user {
+        border: none;
+        padding: 20px 0 0 50px;
+        border-radius: 3px;
+        width: 85px;
+        position: relative;
+        margin-right: 30px;
+    }
+    &__label {
+        padding: 20px 0;
+        width: 85px;
+        position: relative;
+        ::before {
+            content: "Гости";
+            display: block;
+            position: absolute;
+            color: #444444cc;
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 600;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            z-index: 1000;
+            left: 35px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: url(../assets/images/icon/user.png);
+            z-index: 1000;
+            top: 34%;
+            transform: translateY(-50%);
+            left: 15px;
+            width: 19px;
+            height: 19px;
+        }
+    }
+    &__button {
+        color: #333333;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 600;;
+        line-height: 28px;
+        padding: 9px 28px;
+        border-radius: 3px;
+        border: none;
+        box-shadow: 0 5px 6px rgba(87, 91, 124, 0.45);
+        background-color: #fbd407;
+    }
+}
+
+::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+.shape {
+    // position: absolute;
+    width: 950px;
+    height: 1186px;
+    background: url(../assets/images/background/shape.png);
+    z-index: 1000;
+}
+
+.video {
+    z-index: -1000;
+}
