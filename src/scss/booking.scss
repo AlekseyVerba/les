@@ -1,17 +1,41 @@
 .booking {
     padding: 10px 0;
     background-color: #d3c1a2;
-    width: 1400px;
+    width: 1450px;
     float: right;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1000;
+    &::after {
+        content: "";
+        background: url(../assets/images/icon/line.png);
+        transform: rotate(360deg);
+        position: absolute;
+        width: 550px;
+        top: -42px;
+        left: 47%;
+        transform: translateX(-50%);
+        height: 44px;
+    }
+    &::before {
+        content: "";
+        background: url(../assets/images/icon/line.png);
+        transform: rotate(360deg);
+        position: absolute;
+        width: 550px;
+        bottom: -42px;
+        left: 44%;
+        transform: translateX(-50%) rotate(180deg);
+        height: 44px;
+    }
     &__room {
         color: #1d1d1b;
         font-family: "BebasNeue";
         font-size: 30px;
         font-weight: 400;
         margin-right: 30px;
-        margin-left: 110px;
+        margin-left: 160px;
     }
     // &__form {
     //     display: flex;
@@ -110,19 +134,80 @@
         background-color: #fbd407;
     }
 }
+.booking__container {
+    padding: 2px 0;
+    border-top: 2px solid #c5ac84;
+    border-bottom: 2px solid #c5ac84;
+    z-index: 1000;
+    width: 1450px;
+    float: right;
+}
 
 ::-webkit-calendar-picker-indicator{
     display: none;
 }
 
 .shape {
-    // position: absolute;
+    position: absolute;
     width: 950px;
-    height: 1186px;
-    background: url(../assets/images/background/shape.png);
-    z-index: 1000;
+    height: 1180px;
+    z-index: 10000;
+    top: -60px;
+    left: -30px;
 }
 
 .video {
     z-index: -1000;
+}
+.miniVideo {
+    display: none;
+    width: 450px;
+    margin-left: 40px;
+}
+
+.fog {
+    position: relative;
+    top: -406px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    // background: url(../assets/images/background/background.jpg) center center;  
+    background-size: cover;
+}
+.fog::before,
+.fog::after,
+.fog div::before, 
+.fog div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.fog div::before, 
+.fog div::after    {
+    left: 100%;
+}
+.fog::before, 
+.fog div::before {
+    background-image: url(../assets/images/tum.png);
+    animation: fogmove 20s linear 0s infinite;
+}
+.fog::after, 
+.fog div::after {
+    // background-image: url(../assets/images/tum.png);
+    animation: fogmove 10s linear 0s infinite;
+}
+@keyframes fogmove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
